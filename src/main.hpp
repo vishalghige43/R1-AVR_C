@@ -1,6 +1,14 @@
 #include <define.hpp>
-void gpio_init(){
+#include <stdio.h>
 
+void red_gear_init(){
+    while(Usb.Init()!=-1){
+        printf("\r\nOSC did not start!");
+    };
+    printf("\r\nXBOX USB Library Started");
+}
+
+void gpio_init(){
     //TODO: Pin_1/Pin_2 set for input
     DDRA|= (1<<dirFL) | (1<<dirBL);
     DDRB|= (1<<mPinBL)| (1<<mPinFR) | (1<<ServoPin_3) | (1<<stepPin);
@@ -11,3 +19,5 @@ void gpio_init(){
 
     _delay_ms(1);
 }
+
+

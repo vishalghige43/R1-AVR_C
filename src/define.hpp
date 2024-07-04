@@ -1,9 +1,12 @@
 #include <avr/io.h>
+#include <util/delay.h>
+// #include "Servo/"
+
 
 #define mPinFL PH5
 #define mPinFR PB5
 #define mPinBL PB4
-#define mPinBR PB5
+#define mPinBR PH6
 #define dirFL PA5
 #define dirFR PC4
 #define dirBL PA7
@@ -47,4 +50,3 @@ uint8_t gripperSpeed=100,flipSpeed=100;
 #define dirPin PC0
 #define stepPin PB6
 #define stepsPerRevolution 3200  
-

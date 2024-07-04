@@ -1,7 +1,5 @@
 #include <avr/io.h>
 #include <util/delay.h>
-// #include "Servo/"
-
 
 #define mPinFL PH5
 #define mPinFR PB5
@@ -15,7 +13,7 @@
 #define forward 0
 #define backward 1
 
-uint8_t front=1;
+int front=1;
 
 uint32_t FL_motor=0;
 uint32_t FR_motor=0;
@@ -44,7 +42,7 @@ uint8_t seedPos=0;
 
 #define hatVal (Xbox.getAnalogHat(LeftHatX) > 7500 || Xbox.getAnalogHat(LeftHatX) < -7500 || Xbox.getAnalogHat(LeftHatY) > 7500 || Xbox.getAnalogHat(LeftHatY) < -7500 || Xbox.getAnalogHat(RightHatX) > 7500 || Xbox.getAnalogHat(RightHatX) < -7500)
 
-uint8_t gripperSpeed=100,flipSpeed=100;
+int gripperSpeed=100,flipSpeed=100;
 
 #define shootPnuematic PE5
 #define dirPin PC0
